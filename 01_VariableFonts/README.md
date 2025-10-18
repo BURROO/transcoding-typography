@@ -8,6 +8,7 @@
 
 ## Overview
 
-# 00 – This Chapter is your reference for Basic Coding Concepts
-# 01 – We are looking at the basics of looking into Variable Fonts and how they work
+### 00 – Basic Coding Concepts
+> This Chapter is your reference for Basic Coding Concepts
+### 01 – We are looking at the basics of looking into Variable Fonts and how they work
 

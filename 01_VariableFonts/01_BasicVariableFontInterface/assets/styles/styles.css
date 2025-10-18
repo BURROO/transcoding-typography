@@ -10,6 +10,10 @@
 	font-variation-settings: "wght" 110.8871, "wdth" 0, "XXXX" 20.3551;
 }
 
+#preview{
+    outline: none;
+}
+
 /* The start overwrites browser default settings */
 *{
     padding: 0;
