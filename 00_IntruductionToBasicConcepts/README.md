@@ -1,9 +1,11 @@
-# Introduction to Basic Setups
+# Introduction to Basic Concepts
 
-> [!NOTE]
-> This instruction is part of the Lecture on «Transcoding Typography» and serves as a first step for understanding the relationship between Formating (html), basic styling (css) and a scripting (javascript) in the context of a variable font tool.
+> This section is intended to give a quick introduction to useful concepts – mainly for javascript – to help get started with an interactive design tool.
 
-## Task
+This Section is organized as such:
 
-Have a look at the files and try to understand.
-If you have some experience with Variable Font and Web Development, you might already get a grasp of it, otherwise please follow the explanation and the step by step Guide below.
+– DOM (Accessing HTML Elements)
+– Functions
+– Arrays & Loops
+
+

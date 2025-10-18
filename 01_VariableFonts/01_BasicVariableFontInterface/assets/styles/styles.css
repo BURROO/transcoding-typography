@@ -1,7 +1,7 @@
 /* Importing the typefaces */
 @font-face {
     font-family: 'Variable Font';
-    src: url(assets/Jabin-Typeface.ttf);
+    src: url(../fonts/Jabin-Typeface.ttf);
 }
 
 /* Typeface setting for preview */
