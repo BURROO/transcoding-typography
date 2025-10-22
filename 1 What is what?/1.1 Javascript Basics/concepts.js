@@ -10,8 +10,7 @@
 
 // It is common to use camel case for variable, for separating word, like so
 // myVariable > The first letter of a word is uppercase
-
-const greeting = "Hello World!"
+const string = "Hello World!"
 
 // "const" is a variable, that can not suddenly be changed.
 // If we change the variable later on, we can use "let"
