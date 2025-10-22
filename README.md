@@ -12,7 +12,7 @@
 
 ## Overview
 
-### 00 – What is what?
+### 1 – What is what?
 > This Chapter is your reference for Basic Coding 
-### 01 – Variable Fonts
-
+### 2 – Variable Fonts
+> Material from the Workshops
