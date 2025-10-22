@@ -5,8 +5,10 @@ This chapter is building on the previous one.
 The steps that were added:
 
 **index.html**
-– Add a new Input Field in index.html
+
+1. Add a new Input Field in index.html
 
 **javascript.js**
-– Get the new input by the id
-– Add a second *onInput* to the new input field
+
+1. Get the new input by the id
+2. Add a second *onInput* to the new input field
