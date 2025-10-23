@@ -4,7 +4,11 @@
 >
 > In each chapter, we are going to display the outputs on to our index.html file
 
-## 1.1 Data types
+## 1.1 Theory
 
-> In the first chapter, we look at different data types we can look at in javascript 
+> In the theory, we look at different 
+> 1. data types, functions and loops
 > (string, number, boolean, object, array)
+> 2. Accessing and writing html elements
+> 3. Injecting Content & CSS into html elements for interactions
+

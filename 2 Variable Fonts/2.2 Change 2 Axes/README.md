@@ -10,5 +10,7 @@ The steps that were added:
 
 **javascript.js**
 
-1. Get the new input by the id
-2. Add a second *onInput* to the new input field
+1. Create a global variable for each axis
+2. Get the new input by the id
+3. Inside the *onInput* function combing the two values inside a string for the font-variation-settings properties
+4. Add a second *onInput* to the new input field
