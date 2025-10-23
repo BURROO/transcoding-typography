@@ -74,7 +74,7 @@ setInterval(() => {
     const hours = now.getHours();
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
-    const milliseconds = now.milliseconds();
+    const milliseconds = now.getMilliseconds();
 
     // Let turn it into one string
     const timeString = `${hours}:${minutes}:${second}:${milliseconds}`
