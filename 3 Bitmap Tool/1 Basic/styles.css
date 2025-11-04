@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 200px auto;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#preview, #typing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+}
+
+svg{
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.grid line{
+    stroke: none    ;
+}
+
+svg.showGrid .grid line{
+    stroke: gray !important;
+}
+
+aside{
+    padding: 10px;
+}
+
+
+#controls label{
+    display: block;
+    padding-top: 20px;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    cursor: pointer;
+    padding: 20px;
+}
+
+
+
+/* Styling sliders */
+
+input[type=range] {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: black;
+    height: 1px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+}
