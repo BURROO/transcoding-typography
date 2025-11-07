@@ -3,6 +3,7 @@
     padding: 0;
     font-family:'Courier New', Courier, monospace;
     font-size: 12px;
+    box-sizing: border-box;
 }
 
 #container{
@@ -26,7 +27,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     height: 100vh;
 }
 

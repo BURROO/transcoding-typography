@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitmap Font Generator</title>
+
+    <link rel="stylesheet" href="style.css"></link>
+    <script type="text/javascript" src="vendor/lodash.js"></script>
+</head>
+<body>
+
+    <div id="container">
+
+        <aside id="aside">
+            <h2>Controls</h2>
+            <div id="controls">
+                <!-- Container for our controls -->
+            </div>
+
+        </aside>
+
+        <main id="main">
+            <svg viewBox="0 0 1000 1000" id="svg-text">
+                <!-- Rendering our Font -->
+            </svg>
+
+            <!--  -->
+            <footer id="footer">
+                <button id="btn-copy-text">Copy text</button>
+                <input type="text" id="input-text" placeholder="Type something…"></input>
+            </footer>
+        </main>
+
+    </div>
+
+
+    <!-- This is our font file -->
+    <script type="text/javascript" src="scripts/font.js"></script>
+    <!-- this file is in charge for the pixel shape -->
+    <script type="text/javascript" src="scripts/renderPixel.js"></script>
+    <!-- This file contains the logic for typing and rendering -->
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <!-- This file is responsible for controlas and parameters -->
+    <script type="text/javascript" src="scripts/controls.js"></script>
+    <!-- this file is in charge for export/download -->
+    <script type="text/javascript" src="scripts/download.js"></script>
+</body>
+</html>

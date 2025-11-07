@@ -16,7 +16,6 @@ btnCopyText.onclick = () => {
         gridElement.remove()
     })
 
-
     // const svgString = clone.outerHTML;
     const svgString = new XMLSerializer().serializeToString(clone);
 
