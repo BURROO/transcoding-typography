@@ -16,14 +16,4 @@ const renderPixel = (x, y, radius) => {
     newCircle.setAttribute('cy', y)
 
     return newCircle
-    // 
-    // const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-
-    // // Apply attributes based on parameters
-    // rect.setAttribute('width', radius);
-    // rect.setAttribute('height', radius);
-    // rect.setAttribute('x', x-radius/2)
-    // rect.setAttribute('y', y-radius/2)
-
-    // return rect
 }

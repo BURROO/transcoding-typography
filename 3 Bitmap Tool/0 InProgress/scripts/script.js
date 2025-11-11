@@ -3,7 +3,6 @@ console.log("script")
 
 const svgText = document.getElementById("svg-text")
 
-
 const emptyCanvas = () => {
 
     // First remove everything from the canvas/svg
@@ -29,20 +28,22 @@ const renderGrid = () => {
     // 1. Set our start value i=0
     // 2. Stop when i reached the value of columns
     // 3. Increase by 1
-    for(let i = 0; i < columns+1; i++){
+ 
+    for(let i = 0; i <= columns; i++){
         // console.log('i', i)
         const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
         // 
         line.setAttribute('y1', 0)
-        line.setAttribute('y2', height)
         line.setAttribute('x1', i * gridUnitWidth)
+        // 
+        line.setAttribute('y2', height)
         line.setAttribute('x2', i * gridUnitWidth)
 
         group.appendChild(line)
     }
 
     // Render horizontal lines
-    for(let i = 0; i < rows+1; i++){
+    for(let i = 0; i <= rows; i++){
 
         const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
         // 
@@ -78,32 +79,40 @@ const renderGlyph = (character) => {
     const gridUnitWidth = width / columns // 200
     const gridUnitHeight = height / rows // 200
 
-    // c = columnIndex
-    for (let c = 0; c < columns; c++) {
+    const copyCount = bitmapFont.parameters.copies.count
     
-        // r = rowIndex
-        for (let r = 0; r < rows; r++) {
+    for (let copyIndex = 0; copyIndex < copyCount; copyIndex++) {
 
-            // rows = 5
-            const rowCount = r * columns
-            const colCount = c
-            const pixelIndex = rowCount + colCount
-            const currentPixel = currentLetter[pixelIndex]
+    
+        for (let c = 0; c < columns; c++) {
+        
+            // r = rowIndex
+            for (let r = 0; r < rows; r++) {
 
-            if(currentPixel === 0) continue;
+                // rows = 5
+                const rowCount = r * columns
+                const colCount = c
+                const pixelIndex = rowCount + colCount
+                const currentPixel = currentLetter[pixelIndex]
 
-            // console.log("rowCount", rowCount) 
-            const x = c * gridUnitWidth + gridUnitWidth/2
-            const y = r * gridUnitHeight + gridUnitHeight/2
-            const radius = 120
+                if(currentPixel === 0) continue;
 
-            const pixel = renderPixel(x, y, radius)
+                // console.log("rowCount", rowCount) 
+                const x = c * gridUnitWidth + gridUnitWidth/2
+                const y = r * gridUnitHeight + gridUnitHeight/2
+                const radius = bitmapFont.parameters.radius - copyIndex * 40
 
-            glyphGroup.appendChild(pixel)
+                const pixel = renderPixel(x, y, radius)
+
+                pixel.setAttribute('fill', `rgb(255,${copyIndex * 50},0)`)
+
+                glyphGroup.appendChild(pixel)
+            }
         }
     }
     
     svgText.appendChild(glyphGroup)
 }
+
 
 renderGlyph('A')

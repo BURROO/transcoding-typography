@@ -1,7 +1,6 @@
 console.log("font")
 
 // Don't type this
-
 const bitmapFont = {
     parameters: {
         columns: 5,
@@ -22,7 +21,8 @@ const bitmapFont = {
         }
     },
     preview: {
-        text: 'ABC'
+        text: 'ABC',
+        character: 'B'
     },
     glyphs: {
         ".notdef": [

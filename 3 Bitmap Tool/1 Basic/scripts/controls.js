@@ -3,7 +3,7 @@
 // 1. Config for controls
 const controlsNumber = [
     {
-        label: 'Spacing',
+        label: 'Letter Spacing',
         // value: 1000,
         min: 0,
         max: 1000,
