@@ -19,6 +19,24 @@ const controlsNumber = [
         min: 1,
         max: 30,
         path: 'parameters.copies.count'
+    },
+    {
+        label: 'Copy-Scale',
+        min: 0,
+        max: 100,
+        path: 'parameters.copies.offset.scale'
+    },
+    {
+        label: 'Copy-X',
+        min: -100,
+        max: 100,
+        path: 'parameters.copies.offset.x'
+    },
+    {
+        label: 'Copy-Y',
+        min: -100,
+        max: 100,
+        path: 'parameters.copies.offset.y'
     }
 ]
 

@@ -74,12 +74,17 @@ const renderGlyph = (character) => {
     const height = bitmapFont.parameters.height
     const columns = bitmapFont.parameters.columns
     const rows = bitmapFont.parameters.rows
+    const scale = bitmapFont.parameters.copies.offset.scale
+    const offsetX = bitmapFont.parameters.copies.offset.x
+    const offsetY = bitmapFont.parameters.copies.offset.y
 
     // Calculate the Cell Size (Grid Unit)
     const gridUnitWidth = width / columns // 200
     const gridUnitHeight = height / rows // 200
 
     const copyCount = bitmapFont.parameters.copies.count
+
+
     
     for (let copyIndex = 0; copyIndex < copyCount; copyIndex++) {
 
@@ -98,13 +103,30 @@ const renderGlyph = (character) => {
                 if(currentPixel === 0) continue;
 
                 // console.log("rowCount", rowCount) 
-                const x = c * gridUnitWidth + gridUnitWidth/2
-                const y = r * gridUnitHeight + gridUnitHeight/2
-                const radius = bitmapFont.parameters.radius - copyIndex * 40
+                const x = c * gridUnitWidth + gridUnitWidth/2 + offsetX * copyIndex
+                const y = r * gridUnitHeight + gridUnitHeight/2 + offsetY * copyIndex
+
+                // 0, 1, 4, 9, 16, 25
+                const radius = bitmapFont.parameters.radius - (copyIndex) * scale
 
                 const pixel = renderPixel(x, y, radius)
+                // const pixel = renderReactangle(x, y, radius)
+                // const pixel = renderCustomShape(x, y, radius)
 
-                pixel.setAttribute('fill', `rgb(255,${copyIndex * 50},0)`)
+                // Color steps
+                const red = 0
+                const green = 255
+                const blue = 255 / copyCount * copyIndex
+
+                pixel.setAttribute('fill', `rgb(${red},${green},${blue})`)
+
+                if(copyIndex % 2 === 0){
+                    // pixel.setAttribute("fill", "black")
+                    pixel.setAttribute('fill', `rgb(${green},${red},${blue})`)
+                }else{
+                    // pixel.setAttribute("fill", "white")
+                }
+
 
                 glyphGroup.appendChild(pixel)
             }
