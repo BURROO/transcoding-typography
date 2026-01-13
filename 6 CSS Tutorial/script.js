@@ -148,3 +148,19 @@ inputTimeWarp.addEventListener("input", (e) => {
     config.timeSpeed = parseInt(e.currentTarget.value)
     labelTimeWarp.innerHTML = `Time Warp (${config.timeSpeed})`
 })
+
+
+
+const buttonReset = document.getElementById("time-reset")
+
+
+buttonReset.addEventListener("click", () => {
+
+    config.timeOffset = 0;
+    config.timeTravel = 0;
+    config.timeSpeed = 0;
+
+
+    inputTimeTravel.value = 0
+    inputTimeWarp.value = 0
+})

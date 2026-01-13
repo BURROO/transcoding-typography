@@ -53,19 +53,84 @@
 }
 
 #analogue-second{
+    /* position: relative; */
+    /* height: 14px;
+    height: 70px; */
+    /* width: 1px;
+    height: 90px;
+    background: black; */
+}
+
+#analogue-second-pointer{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: black;
+    top: 0;
+    left: -7px;
+    border-radius: 50%;
+
+}
+
+#analogue-second-arm{
     width: 1px;
+    height: 70px;
+    background: black;
+
+}
+
+#analogue-minute{
+    width: 3px;
     height: 90px;
     background: black;
 }
 
-#analogue-minute{
-    width: 2px;
-    height: 80px;
+#analogue-hour{
+    width: 6px;
+    height: 60px;
     background: black;
 }
 
-#analogue-hour{
-    width: 4px;
-    height: 60px;
+#analogue-watch-markers{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#analogue-watch-markers > div{ 
+    /* size of the markers */
+    width: 1px;
+    height: 15px;
     background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(0, -95px);
+}
+
+#analogue-watch-markers > div{ }
+
+/* General Inputs */
+
+input[type="range"]{
+  appearance: none; 
+  -webkit-appearance: none;
+    /*  */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  /* ... */
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+  /* ... */
+}
+
+button{
+
 }
