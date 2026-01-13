@@ -22,6 +22,16 @@ const bitmapFont = {
         character: 'A',
         text: 'ABCDE'
     },
+    elements: [
+        {
+            type: "text",
+            x: 200,
+            y: 20,
+            content: "Inhalt",
+            fontSize: 24,
+            
+        }
+    ]
     glyphs: {
         '.notdef': [
             1,0,1,0,1,

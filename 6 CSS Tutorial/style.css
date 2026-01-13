@@ -1,0 +1,71 @@
+
+/* –––––––––––––––––– Calendar –––––––––––––––––– */
+
+
+#calendar-wrapper{
+
+}
+
+
+#calendar{
+    display: grid;
+    grid-template-columns: 200px 50px 200px 90px;
+    column-gap: 20px;
+}
+
+
+/* –––––––––––––––––– Digital Watch –––––––––––––––––– */
+
+#digital-watch-wrapper{
+    
+}
+
+#digital-watch{
+    
+}
+
+/* –––––––––––––––––– Analogue Watch –––––––––––––––––– */
+
+
+#analogue-watch-wrapper{
+    /* Positioning the watch … */
+
+}
+
+#analogue-watch{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: white;
+}
+
+
+#analogue-second,
+#analogue-minute,
+#analogue-hour{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    border-radius: 4px;
+}
+
+#analogue-second{
+    width: 1px;
+    height: 90px;
+    background: black;
+}
+
+#analogue-minute{
+    width: 2px;
+    height: 80px;
+    background: black;
+}
+
+#analogue-hour{
+    width: 4px;
+    height: 60px;
+    background: black;
+}
